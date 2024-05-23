@@ -3,6 +3,11 @@
 *:after {
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: 'Jost';
+  src: url('@/assets/fonts/Jost-VariableFont_wght.ttf') format('truetype');
+}
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -19,7 +24,7 @@
 } */
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Jost, Avenir, Helvetica, Arial, sans-serif;
   width: 100%;
 }
 

@@ -38,6 +38,11 @@ export default {
 </script>
 
 <style scoped>
+@font-face {
+  font-family: 'Jost';
+  src: url('@/assets/fonts/Jost-VariableFont_wght.ttf') format('truetype');
+}
+
 .banner {
   position: fixed;
   width: 100%;
@@ -68,6 +73,9 @@ export default {
 }
 
 .banner-text {
+  font-family: 'Jost';
+  font-weight: 200;
+  letter-spacing: 0.1em;
   position: relative;
   margin-top: 100px;
   font-size: 5em;
