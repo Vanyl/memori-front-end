@@ -3,13 +3,13 @@
         <form class="search-film" role="search">
             <label for="search" class="hidden-visually">Search: </label>
             <input type="text" placeholder="Search for a film" name="search-film" id="search-film" v-model="search" />
-            <button type="submit"><font-awesome-icon :icon="['fas', 'film']" size="xl" style="color: white;" /></button>
+            <button type="submit"><font-awesome-icon :icon="['fas', 'film']" size="xl" style="color: grey;" /></button>
         </form>
         <form class="search-camera" role="search">
             <label for="search" class="hidden-visually">Search: </label>
             <input type="text" placeholder="Search for a camera" name="search-camera" id="search-camera"
                 v-model="search" />
-            <button type="submit"><font-awesome-icon :icon="['fas', 'camera']" size="xl" style="color: white;" /></button>
+            <button type="submit"><font-awesome-icon :icon="['fas', 'camera']" size="xl" style="color: grey;" /></button>
         </form>
     </div>
 </template>
@@ -42,7 +42,7 @@ export default {
     margin: 0 auto;
     z-index:2;
     position: relative;
-    margin-top: 45vh;
+    margin-top: 25vh;
 }
 
 .hidden-visually {

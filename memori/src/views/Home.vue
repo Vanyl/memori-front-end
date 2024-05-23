@@ -1,6 +1,8 @@
 <script setup>
 import Banner from '@/components/Banner.vue'
 import Search from '@/components/Search.vue'
+import Spotlight from '@/components/Spotlight.vue'
+
 </script>
 
 <template>
@@ -8,6 +10,7 @@ import Search from '@/components/Search.vue'
         <Banner title="MEMORI" />
         <div class="content">
             <Search />
+            <Spotlight/>
         </div>
     </div>
 </template>
