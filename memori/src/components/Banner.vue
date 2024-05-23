@@ -1,6 +1,5 @@
 <template>
   <div :class="['banner', { 'banner-small': isScrolled }]">
-    <div class="banner-background"></div>
     <div class="banner-text">{{ title }}</div>
   </div>
 </template>
@@ -20,11 +19,7 @@ export default {
     const isScrolled = ref(false);
 
     const handleScroll = () => {
-      if (window.scrollY > 100) { // Adjust the scroll value as needed
-        isScrolled.value = true;
-      } else {
-        isScrolled.value = false;
-      }
+      isScrolled.value = window.scrollY > 100;
     };
 
     onMounted(() => {
@@ -46,16 +41,16 @@ export default {
 .banner {
   position: fixed;
   width: 100%;
-  height: 50vh;
+  height: 60vh;
   text-align: center;
   top: 0;
-  transition: all 0.3s ease;
   z-index: 1;
-  overflow: hidden;
-  color: white; 
+  color: white;
+  transition: all 0.3s ease;
 }
 
-.banner-background {
+.banner::before {
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -68,30 +63,32 @@ export default {
   transition: opacity 0.5s ease;
 }
 
-.banner-small .banner-background {
+.banner-small::before {
   opacity: 0;
 }
 
 .banner-text {
   position: relative;
   margin-top: 100px;
-  font-size: 72px; 
-  transition: all 0.3s ease;
+  font-size: 5em;
+  transition: font-size 0.3s ease, margin-top 0.3s ease;
 }
 
 .banner-small .banner-text {
-  font-size: 24px;
-  top: 0;
-  left: 0;
   text-align: left;
+  font-size: 24px;
   margin-top: 25px;
   padding-left: 20px;
-  color: #213547; 
+  color: #213547;
 }
 
 @media only screen and (max-width: 768px) {
   .banner {
     height: 25vh;
+  }
+
+  .banner-text {
+    font-size: 2.5rem;
   }
 }
 </style>
