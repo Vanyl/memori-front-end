@@ -99,4 +99,10 @@ export default {
     font-size: 2.5rem;
   }
 }
+
+@media (min-width: 600px) {
+  body {
+    background: green;
+  }
+}
 </style>

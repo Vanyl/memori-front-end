@@ -19,11 +19,12 @@ export default {
 
 <style scoped>
 .spotlight-container{
+    z-index: 2;
     margin-top: 100px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 50px;
+
 }
 
 .spotlight-img{
@@ -32,9 +33,9 @@ export default {
     object-fit: cover;
 }
 
-.spotlight-info{
-    max-width: 25%
-}
+/* .spotlight-info{
+    
+} */
 
 .spotlight-description-box{
     width: 230px;
@@ -44,5 +45,17 @@ export default {
 
 .spotlight-description-box p{
     margin: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+    .spotlight-container{
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .spotlight-info{
+        max-width: 25%
+    }   
 }
 </style>
