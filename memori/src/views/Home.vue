@@ -2,7 +2,7 @@
 import Banner from '@/components/Banner.vue'
 import Search from '@/components/Search.vue'
 import Spotlight from '@/components/Spotlight.vue'
-
+// when search component is at certain level on windows => banner size reduced
 </script>
 
 <template>
@@ -17,10 +17,11 @@ import Spotlight from '@/components/Spotlight.vue'
 
 <style scoped>
 .home {
+    /* to test scroll */
     height: 200vh;
 }
 
 .content {
-    padding-top: 20vh;
+    padding: 20vh 15px 0 15px;
 }
 </style>
