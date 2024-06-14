@@ -19,7 +19,7 @@ export default {
     const isScrolled = ref(false);
 
     const handleScroll = () => {
-      isScrolled.value = window.scrollY > 100;
+      isScrolled.value = window.scrollY > 50;
     };
 
     onMounted(() => {
@@ -49,6 +49,7 @@ export default {
   height: 60vh;
   text-align: center;
   top: 0;
+  left: 0;
   z-index: 1;
   color: white;
   transition: all 0.3s ease;
