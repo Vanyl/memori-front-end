@@ -1,41 +1,41 @@
+<script>
+    import { ref, onMounted, onUnmounted } from 'vue';
+    
+    export default {
+      name: 'Banner',
+      props: {
+        title: {
+          type: String,
+          required: true
+        }
+      },
+      setup() {
+        const isScrolled = ref(false);
+    
+        const handleScroll = () => {
+          isScrolled.value = window.scrollY > 50;
+        };
+    
+        onMounted(() => {
+          window.addEventListener('scroll', handleScroll);
+        });
+    
+        onUnmounted(() => {
+          window.removeEventListener('scroll', handleScroll);
+        });
+    
+        return {
+          isScrolled
+        };
+      }
+    };
+</script>
+
 <template>
   <div :class="['banner', { 'banner-small': isScrolled }]">
     <div class="banner-text">{{ title }}</div>
   </div>
 </template>
-
-<script>
-import { ref, onMounted, onUnmounted } from 'vue';
-
-export default {
-  name: 'Banner',
-  props: {
-    title: {
-      type: String,
-      required: true
-    }
-  },
-  setup() {
-    const isScrolled = ref(false);
-
-    const handleScroll = () => {
-      isScrolled.value = window.scrollY > 50;
-    };
-
-    onMounted(() => {
-      window.addEventListener('scroll', handleScroll);
-    });
-
-    onUnmounted(() => {
-      window.removeEventListener('scroll', handleScroll);
-    });
-
-    return {
-      isScrolled
-    };
-  }
-};
-</script>
 
 <style scoped>
 @font-face {

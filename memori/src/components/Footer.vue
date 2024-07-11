@@ -1,3 +1,19 @@
+<script>
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { faCamera } from '@fortawesome/free-solid-svg-icons';
+import { library } from '@fortawesome/fontawesome-svg-core';
+
+export default {
+    name: 'Footer',
+    components: {
+        FontAwesomeIcon
+    },
+    setup() {
+        library.add(faCamera);
+    },
+};
+</script>
+
 <template>
     <footer id="footer">
         <div class="menu-footer">
@@ -14,22 +30,6 @@
         </div>
     </footer>
 </template>
-
-<script>
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { faCamera } from '@fortawesome/free-solid-svg-icons';
-import { library } from '@fortawesome/fontawesome-svg-core';
-
-export default {
-    name: 'Footer',
-    components: {
-        FontAwesomeIcon
-    },
-    setup() {
-        library.add(faCamera);
-    },
-};
-</script>
 
 <style scoped>
 #footer {
