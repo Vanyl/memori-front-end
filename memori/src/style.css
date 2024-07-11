@@ -8,8 +8,6 @@
   font-family: 'Jost';
   src: url('@/assets/fonts/Jost-VariableFont_wght.ttf') format('truetype');
 }
-/* :root {
-} */
 
 #app {
   font-family: Jost, Avenir, Helvetica, Arial, sans-serif;
@@ -35,11 +33,10 @@ body {
   color: white;
 }
 
-.container {
+main {
   display: flex;
   margin: 0 auto;
   justify-content: center;
-
 }
 
 h1 {
