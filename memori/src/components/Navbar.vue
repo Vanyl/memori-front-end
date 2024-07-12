@@ -7,7 +7,7 @@
             <router-link to="/" :class="{ active: isActive('/') }">home</router-link>
           </li>
           <li>
-            <router-link to="/profile" :class="{ active: isActive('/profile') }">profile</router-link>
+            <router-link to="/authentication" :class="{ active: isActive('/authentication') }">authentication</router-link>
           </li>
           <li>
             <router-link to="/community" :class="{ active: isActive('/community') }">community</router-link>
